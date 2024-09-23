@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinémavis</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style>
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-info {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+    }
+  </style>
+
+<!-- Autres balises d'en-tête-->
+
+<script type="module">
+    import { name } from './Profil.js';
+    import { email } from './Profil.js';
+    import { gender } from './Profil.js';
+
+ // Utilisez la valeur du nom comme vous le souhaitez
+ console.log(name); // Affiche "John Doe" dans la console
+    document.getElementById("nameOutput").textContent = name; // Affiche "John Doe" dans un élément HTML avec l'ID "nameOutput"
+  
+
+</script>
+</head>
+
+
+<body>
+
+  <!-- logo + nom -->
+
+  <header>
+		<p style="float:left"><img src="img/logo.jpg" alt="image du logo" width="250" height="250"></p>
+		<p class="logo" style="text-align: center">
+			<ins><h9>Cinémavis</h9></ins><br/>
+			Sur cette page, c'est la page du profil. Retrouver votre nom, gerne adresse mail de votre profil.
+    </p>
+	</header>
+
+  <nav class="menu-nav">
+    <ul>
+        <li class="btn" :hover>
+            <a href="index.html">
+                Accueil
+            </a>
+        </li>
+        <li class="btn" :hover>
+            <a href="Films.html">
+                films
+            </a>
+        </li>
+        <li class="btn">
+            <a href="series.html">
+                Séries
+            </a>
+        </li>
+        <li class="btn" :hover>
+            <a href="autre.html">
+                Autres
+            </a>
+        </li>
+        <li class="btn" :hover>
+          <a href="# ">
+              Profil
+          </a>
+        </li>
+    </ul>
+</nav>
+
+<p class="Bienvenue">
+  Donc sur cette page comme dis juste avent, c'est la page de rpofil. On vous a donnez l'accès a cette page mais le problème, c'est que ce'st un beta test, il y a plein de chose a faire, a refaire et a amélioré. Mais si vous voulez vous amusez a mettre un photo de profil, a mettre de nom et genre que vous voulez. Bien sur on va quand même vous demander un retour de ce que nous pourrions ajouté, enlevé, amélioré, etc. Mais voilà vous le voyez mais dites vous elle sert un peux a rien cette page pour l'instant (toujours en travaux)
+</p>
+
+  <div>
+    <h3>Votre Profil</h3>    
+    <img class="profile-pic" src="img/pp0.png" alt="Profile Picture">
+    <div class="profile-info">
+        <h2 id="name">nom : </h2>
+        <p id="gender">genre : </p>
+        <p id="email">Adresse mail : </p>
+      </div>
+  </div>
+
+  <!-- Autres éléments de la page -->
+  <div>
+    <h2 id="nameOutput"></h2>
+    <!-- Autres éléments de la page -->
+  </div>
+  <script>
+    // Mettez à jour les éléments HTML avec les informations du profil
+    document.getElementById("name").textContent = profile.name;
+    document.getElementById("gender").textContent = profile.gender;
+    document.getElementById("email").textContent = profile.email;
+  </script>
+
+
+
+  <div>
+    <h3>Choisissez votre photo de profil :</h3>
+    <label for="profile-image">Sélectionnez une image :</label>
+    <select id="profile-image">
+      <option value="img/pp1.jpg">Image 1</option>
+      <option value="img/pp2.jpg">Image 2</option>
+      <option value="img/pp3.jpg">Image 3</option>
+      <option value="img/pp4.jpg">Image 4</option>
+      <option value="img/pp5.jpg">Image 5</option>
+      <option value="img/pp6.jpg">Image 6</option>
+      <option value="img/pp7.jpg">Image 7</option>
+      <option value="img/pp8.jpg">Image 8</option>
+      <option value="img/pp9.jpg">Image 9</option>
+      <option value="img/pp10.jpg">Image 10</option>
+      <option value="img/pp11.jpg">Image 11</option>
+      <option value="img/pp12.jpg">Image 12</option>
+      <option value="img/pp13.jpg">Image 13</option>
+      <option value="img/pp14.jpg">Image 14</option>
+      <option value="img/pp15.jpg">Image 15</option>
+      <option value="img/pp16.jpg">Image 16</option>
+      <option value="img/pp17.jpg">Image 17</option>
+      <option value="img/pp18.jpg">Image 18</option>
+      <option value="img/pp19.jpg">Image 19</option>
+      <option value="img/pp20.jpg">Image 20</option>
+      <option value="img/pp21.jpg">Image 21</option>
+      <option value="img/pp22.jpg">Image 22</option>
+      <option value="img/pp23.jpg">Image 23</option>
+      <!-- Ajoutez les autres options d'images ici -->
+    </select>
+  </div>
+
+  <script>
+    var selectElement = document.getElementById("profile-image");
+    selectElement.addEventListener("change", function() {
+      var selectedImage = selectElement.options[selectElement.selectedIndex].value;
+      var profilePicElement = document.querySelector(".profile-pic");
+      profilePicElement.src = selectedImage;
+    });
+  </script>
+
+
+<input type="text" id="nameInput" placeholder="Nom">
+<input type="text" id="genderInput" placeholder="Sexe">
+<input type="email" id="emailInput" placeholder="Adresse e-mail">
+<button id="saveProfileButton">Enregistrer</button>
+<script src="Profil.js"></script>
+
+
+</body>
+</html>

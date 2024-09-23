@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinémavis</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+   <!-- logo + nom -->
+
+
+  <header>
+		<img src="img/logo.jpg" width="100" height="100">
+		<p class="logo">
+			Cinémavis
+			<h2>Voici un site où tu peux Noter et Commmenter des films et séries de ton choix, tes préféré "surtout"</h2> 
+		</p>
+	</header>
+
+
+    <!-- diiférent page -->
+
+	<nav class="menu-nav">
+        <ul>
+            <li class="btn" :hover>
+                <a href="index.html">
+                    Accueil
+                </a>
+            </li>
+            <li class="btn" :hover>
+                <a href="Films.html">
+                    films
+                </a>
+            </li>
+            <li class="btn">
+                <a href="series.html">
+                    Séries
+                </a>
+            </li>
+            <li class="btn" :hover>
+                <a href="autre.html">
+                    Autres
+                </a>
+            </li>
+            <li class="btn" :hover>
+              <a href="#">
+                  Profil
+              </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+  <h1>Création de profil</h1>
+
+  <form id="inscriptionForm">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" required><br>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" required><br>
+
+    <label for="sexe">Sexe :</label>
+    <select id="sexe" required>
+      <option value="masculin">Masculin</option>
+      <option value="feminin">Féminin</option>
+    </select><br>
+
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" id="email" required><br>
+
+    <label for="motDePasse">Mot de passe :</label>
+    <input type="password" id="motDePasse" required><br>
+
+    <input type="submit" value="Créer le profil">
+  </form>
+
+  <h1>Connexion</h1>
+
+  <form id="connexionForm">
+    <label for="emailConnexion">Adresse e-mail :</label>
+    <input type="email" id="emailConnexion" required><br>
+
+    <label for="motDePasseConnexion">Mot de passe :</label>
+    <input type="password" id="motDePasseConnexion" required><br>
+
+    <input type="submit" value="Se connecter">
+  </form>
+
+  <h1>Profil utilisateur</h1>
+
+  <div id="userProfile">
+    <img id="profilePic" src="" alt="Photo de profil">
+    <p><strong>Nom :</strong> <span id="userName"></span></p>
+    <p><strong>Prénom :</strong> <span id="userFirstName"></span></p>
+    <p><strong>Sexe :</strong> <span id="userGender"></span></p>
+    <p><strong>Adresse e-mail :</strong> <span id="userEmail"></span></p>
+  </div>
+
+  <script src="script4.js"></script>
+</body>
+</html>
